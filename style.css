@@ -1,7 +1,110 @@
-*{
+/* Reset and base styles */
+* {
   margin: 0;
-  padding: 0;box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Full-screen background with gradient */
 body {
-  background: linear-gradient(#ff7e5f, #feb47b); /* orange to peach */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Outer container */
+.main-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Glass-style content box */
+.content-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Title styling */
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Add task bar */
+.add-task-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field */
+.add-task-bar input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.add-task-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Add button */
+.add-task-bar button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #8e2de2, #4a00e0);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.add-task-bar button:hover {
+  transform: scale(105%);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .content-box {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .add-task-bar input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .add-task-bar button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
 }
