@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To-Do List</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="main-container">
     <div class="content-box">
       <h2 class="title">To-Do List</h2>
-      <div class="add-task-bar">
-        <input type="text" placeholder="Add a new task..." id="task-input" />
-        <button id="add-btn">Add</button>
+      <div class="main-content">
+        <div class="add-task-bar">
+          <input type="text" placeholder="Add a new task..." id="task-input" />
+          <button id="add-btn">Add</button>
+        </div>
+        <ul id="task-list">
+          <li><span class="check-icon">⭕</span><span class="task-text">Task 1</span></li>
+          <li><span class="check-icon">⭕</span><span class="task-text">Task 2</span></li>
+          <li><span class="check-icon">⭕</span><span class="task-text">Task 3</span></li>
+        </ul>
+
       </div>
-      <!-- Optional: You can add a <ul> here to display tasks -->
     </div>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
